@@ -1,21 +1,58 @@
 import Head from "next/head";
-import { Inter } from "@next/font/google";
+import Image from "next/image";
 import styled from "styled-components";
 import banner from "../images/banner.jpeg";
-const inter = Inter({ subsets: ["latin"] });
+import logo from "../images/logo.png";
 
 const Banner = styled.section`
   background: linear-gradient(
       0deg,
-      rgba(0, 0, 0, 0.7),
-      rgba(120, 120, 120, 0.3)
+      rgba(0, 0, 0, 0.9),
+      rgba(120, 120, 120, 0.8)
     ),
     url(${banner.src});
   background-size: cover;
   background-position: center center;
   background-attachment: fixed;
   width: 100%;
+  text-align: center;
+
+  img {
+    width: auto;
+    height: 300px;
+    margin: 0 auto;
+    display: block;
+  }
+
+  h1 {
+    color: #fff;
+    font-size: 2rem;
+  }
+`;
+const Container = styled.div`
+  height: 100%;
   min-height: 100vh;
+  max-width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+`;
+
+const CallToActionButton = styled.a`
+  margin-top: 30px;
+  padding: 20px;
+  background: #fff;
+  border: 1px solid #fff;
+  border-radius: 4px;
+  text-transform: uppercase;
+  font-weight: bold;
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.5);
+  color: #000;
+  font-size: 0.8rem;
+  text-decoration: none;
 `;
 
 export default function Home() {
@@ -31,7 +68,16 @@ export default function Home() {
       </Head>
       <main>
         <Banner>
-          <button>Agende sua aula experimental agora!</button>
+          <Container>
+            <Image
+              src={logo}
+              alt="Iuri Team - Escola de Jiu-jitsu, Jiu-jitsu Infantil e Boxe"
+            />
+            <h1>Escola de Jiu-jitsu, Jiu-jitsu Infantil e Boxe</h1>
+            <CallToActionButton href="https://api.whatsapp.com/send?phone=555181438706&text=Oi%2C%20vi%20esse%20an%C3%BAncio%20no%20Google%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20da%20escola.%20Oss">
+              Agende sua aula experimental agora!
+            </CallToActionButton>
+          </Container>
         </Banner>
         <section>
           <p>
