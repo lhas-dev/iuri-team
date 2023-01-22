@@ -64,27 +64,6 @@ export default class MyDocument extends Document {
             href="/favicon-16x16.png"
           />
           <link rel="manifest" href="/site.webmanifest" />
-          <meta
-            name="title"
-            content="Iuri Team - Escola de Jiu-jitsu, Jiu-jitsu Infantil e Boxe"
-          />
-          <meta property="og:type" content="website" />
-          <meta
-            property="og:title"
-            content="Iuri Team - Escola de Jiu-jitsu, Jiu-jitsu Infantil e Boxe"
-          />
-          <meta
-            name="description"
-            content="Treinos para adultos de todas as idades (iniciante, intermerdiário, avançado e competição). Nós temos treinos KIDS (infantil) em horários alternativos. Para crianças a partir de 5 anos de idade."
-          />
-          <meta
-            property="og:description"
-            content="Treinos para adultos de todas as idades (iniciante, intermerdiário, avançado e competição). Nós temos treinos KIDS (infantil) em horários alternativos. Para crianças a partir de 5 anos de idade."
-          />
-          <meta
-            property="og:image"
-            content="https://iuriteam.com.br/android-chrome-192x192.png"
-          />
         </Head>
         <body>
           <Main />
