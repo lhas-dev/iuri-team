@@ -69,6 +69,10 @@ export default class MyDocument extends Document {
             src="https://www.googletagmanager.com/gtag/js?id=AW-11071589805"
             strategy="afterInteractive"
           />
+          <Script
+            src="https://www.googletagmanager.com/gtag/js?id=G-LP3W3P3J01"
+            strategy="afterInteractive"
+          />
           <Script id="google-analytics" strategy="afterInteractive">
             {`
               window.dataLayer = window.dataLayer || [];
@@ -76,6 +80,15 @@ export default class MyDocument extends Document {
               gtag('js', new Date());
 
               gtag('config', 'AW-11071589805');
+        `}
+          </Script>
+          <Script id="google-analytics2" strategy="afterInteractive">
+            {`
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-LP3W3P3J01');
         `}
           </Script>
         </Head>
