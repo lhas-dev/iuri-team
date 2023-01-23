@@ -5,6 +5,7 @@ import Document, {
   NextScript,
   Head,
 } from "next/document";
+import Script from "next/script";
 import { ServerStyleSheet } from "styled-components";
 
 export default class MyDocument extends Document {
@@ -64,6 +65,19 @@ export default class MyDocument extends Document {
             href="/favicon-16x16.png"
           />
           <link rel="manifest" href="/site.webmanifest" />
+          <Script
+            src="https://www.googletagmanager.com/gtag/js?id=AW-11071589805"
+            strategy="afterInteractive"
+          />
+          <Script id="google-analytics" strategy="afterInteractive">
+            {`
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'AW-11071589805');
+        `}
+          </Script>
         </Head>
         <body>
           <Main />
