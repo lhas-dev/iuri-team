@@ -109,7 +109,9 @@ const whatsAppUrl =
   "https://api.whatsapp.com/send?phone=555181438706&text=Oi%2C%20vi%20esse%20an%C3%BAncio%20no%20Google%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20da%20escola.%20Oss";
 
 const WhatsAppButton = ({ label = "Agendar aula experimental GRATUITA" }) => (
-  <CallToActionButton href={whatsAppUrl}>{label}</CallToActionButton>
+  <CallToActionButton href={whatsAppUrl} target="_blank">
+    {label}
+  </CallToActionButton>
 );
 
 export default function Home() {
@@ -272,7 +274,7 @@ export default function Home() {
           <p>Santa Maria Goretti - POA, Ao lado do Bourbon Assis Brasil.</p>
           <p>De segunda a sexta: 10h às 20h30.</p>
         </Footer>
-        <FloatingActionButton>
+        <FloatingActionButton href={whatsAppUrl} target="_blank">
           <i className="fa fa-whatsapp my-float"></i>
         </FloatingActionButton>
       </main>
